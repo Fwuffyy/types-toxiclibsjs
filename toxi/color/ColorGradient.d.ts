@@ -1,6 +1,6 @@
-import TColor from "toxiclibsjs/color/TColor";
 import { NumberComparatorResult } from "../common";
-import ColorList from "toxiclibsjs/color/ColorList";
+import ColorList from "./ColorList";
+import TColor from "./TColor";
 
 /**
  * A protected object for every point on the gradient

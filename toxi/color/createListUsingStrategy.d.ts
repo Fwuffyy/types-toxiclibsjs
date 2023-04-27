@@ -1,5 +1,5 @@
-import ColorList from "toxiclibsjs/color/ColorList";
-import TColor from "toxiclibsjs/color/TColor";
+import ColorList from "./ColorList";
+import TColor from "./TColor";
 
 // TODO StrategyT
 

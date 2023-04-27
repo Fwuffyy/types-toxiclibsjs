@@ -1,5 +1,5 @@
-import TColor from "toxiclibsjs/color/TColor";
 import { NumberComparatorResult } from "../common";
+import TColor from "./TColor";
 
 declare class HistEntry {
 	public col: TColor;

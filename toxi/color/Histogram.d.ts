@@ -1,6 +1,6 @@
-import HistEntry from "toxiclibsjs/color/HistEntry";
 import ColorList from "./ColorList";
 import { ArrayIterator } from "../internals/Iterator";
+import HistEntry from "./HistEntry";
 
 declare class Histogram {
 	public palette: ColorList;

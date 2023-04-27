@@ -1,6 +1,6 @@
-import TColor from "toxiclibsjs/color/TColor";
 import ColorGradient from "./ColorGradient";
 import ColorList from "./ColorList";
+import TColor from "./TColor";
 
 /**
  * ToneMap
