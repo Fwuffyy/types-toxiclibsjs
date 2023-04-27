@@ -1,15 +1,13 @@
 import toxi from "./index";
 
 import toxi2 from "toxiclibsjs";
+import { TColor } from "./toxi/color";
 
-toxi.internals.has.XYWidthHeight({
-    "x": 1
-});
 
-toxi2.color.CMYKAccessor
-toxi2.color.accessCriteria
+[toxi, toxi2];
 
-toxi2.color.ColorList
+toxi2.color.ColorRange
 
-toxi2.color.Hue;
+new toxi.color.ColorRange(TColor.BLACK);
+toxi.color.ColorTheme.prototype
 // toxi.color.accessCriteria.ALPHA;

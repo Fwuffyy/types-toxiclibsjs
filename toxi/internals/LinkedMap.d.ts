@@ -1,4 +1,4 @@
-import { EachIterator } from "./common";
+import { EachIterator } from "../common";
 
 type KeyGeneratorFunction = (key: any) => string;
 

@@ -1,4 +1,4 @@
-type NumberComparatorResult = -1 | 0 | 1;
+import { NumberComparatorResult } from "../common";
 
 declare function numberComparator(f1: number, f2: number): NumberComparatorResult;
 
