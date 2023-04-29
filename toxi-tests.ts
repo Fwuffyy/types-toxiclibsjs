@@ -1,13 +1,5 @@
-import toxi from "./index";
+/// <reference path="./index.d.ts" />
 
-import toxi2 from "toxiclibsjs";
-import { TColor } from "./toxi/color";
+import toxi from "toxiclibsjs";
 
-
-[toxi, toxi2];
-
-toxi2.color.ColorRange
-
-new toxi.color.ColorRange(TColor.BLACK);
-toxi.color.ColorTheme.prototype
-// toxi.color.accessCriteria.ALPHA;
+import toxi2 from "./node_modules/toxiclibsjs";

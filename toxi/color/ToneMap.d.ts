@@ -1,3 +1,5 @@
+import { MathInterpolatorT } from "../common";
+import ScaleMap from "../math/ScaleMap";
 import ColorGradient from "./ColorGradient";
 import ColorList from "./ColorList";
 import TColor from "./TColor";
@@ -21,6 +23,9 @@ import TColor from "./TColor";
  * `new ToneMap( min, max, colorA, colorB, resolution );`
  */
 declare class ToneMap {
+    public map: ScaleMap;
+    public colors: ColorList;
+
     /**
      * @param {Number} min `min` or `a`
      * @param {Number} max `max` or `b`
@@ -75,11 +80,10 @@ declare class ToneMap {
      */
     public getToneMappedArray(src: number[], pixels: number[], offset?: number): number[];
 
-    // TODO InterpolateStrategy
     /**
      * @param {InterpolateStrategy} func
      */
-    public setMapFunction(func: any): void;
+    public setMapFunction(func: MathInterpolatorT): void;
 }
 
 export = ToneMap;

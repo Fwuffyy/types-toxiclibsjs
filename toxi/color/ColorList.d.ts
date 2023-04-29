@@ -2,6 +2,8 @@ import { ArrayIterator } from "../internals/Iterator";
 import { CallbackIterator } from "../common";
 import TColor from "./TColor";
 import { AccessorT } from "./accessors";
+import { DistanceProxyT } from "./distanceProxies";
+import ProximityComparator from "./ProximityComparator";
 
 /**
  * @class Creates a ColorList by wrapping the given ArrayList of colors. No copies
@@ -143,7 +145,9 @@ declare class ColorList {
 	 * @param isReversed true, if reversed sort
 	 * @return itself
 	 */
-	public sortByComparator(comp: Comparator<TColor> | AccessorT, isReversed: boolean): this;
+	public sortByComparator(comp: ProximityComparator, isReversed: boolean): this;
+
+	public sortByComparator(comp: AccessorT, isReversed: boolean): this;
 
 
 	/**
@@ -154,9 +158,6 @@ declare class ColorList {
 	*/
 	public sortByCriteria(criteria: AccessorT, isReversed: boolean): this;
 
-	// TODO HSVDistanceProxy and etc types
-	// Distance proxy
-	
 	/**
 	 * Sorts the list by relative distance to each predecessor, starting with
 	 * the darkest color in the list.
@@ -164,9 +165,8 @@ declare class ColorList {
 	 * @param isReversed true, if list is to be sorted in reverse.
 	 * @return itself
 	 */
-	public sortByDistance(proxy: any, isReversed?: boolean): this;
+	public sortByDistance(proxy: DistanceProxyT, isReversed?: boolean): this;
 
-	// TODO Proxy
 	/**
 	 * Sorts the list by proximity to the given target color (using RGB distance
 	 * metrics).
@@ -175,7 +175,7 @@ declare class ColorList {
 	 * @param isReversed true, if reverse sorted
 	 * @return sorted list
 	 */
-	public sortByProximityTo(target: TColor, proxy: any, isReversed: boolean): this;
+	public sortByProximityTo(target: TColor, proxy: DistanceProxyT, isReversed: boolean): this;
 
 	public toARGBArray(): number[];
 
@@ -201,14 +201,11 @@ declare class ColorList {
 	public static createFromARGBArray(pixels: number[], num: number, uniqueOnly: boolean, maxIterations: number): ColorList;
 
 	/**
-	 * Not allowed, use toxi/color/createListUsingStrategy instead
+	 * Not allowed, use toxi.color.createListUsingStrategy instead
 	 * @deprecated
 	 * @throws {Error}
 	 */
 	public static createUsingStrategy(): ColorList;
 }
-
-// TODO ProximityComparator
-type Comparator<T> = (a: T, b: T) => number;
 
 export = ColorList;

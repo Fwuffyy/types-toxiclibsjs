@@ -1,9 +1,9 @@
 import { NumberComparatorResult } from "../common";
 import TColor from "./TColor";
+import { DistanceProxyT } from "./distanceProxies";
 
 declare class ProximityComparator {
-	// TODO proxy
-	constructor(col: TColor, proxy: any);
+	constructor(col: TColor, proxy: DistanceProxyT);
 
 	public compare(a: TColor, b: TColor): NumberComparatorResult;
 }
