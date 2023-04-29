@@ -30,6 +30,11 @@ declare class ColorGradient {
 	 */
     public addColorAt(p: number, c: TColor): void;
 
+    /**
+     * Calculates the gradient from specified position.
+     */
+    public calcGradient(): ColorList;
+
 	/**
 	 * Calculates the gradient from specified position.
 	 * @param pos position to start at (float)
