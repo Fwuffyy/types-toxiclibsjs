@@ -1,7 +1,7 @@
 import ColorList from "./ColorList";
 import TColor from "./TColor";
-
-// TODO StrategyT
+import { ColorStrategiesI } from "./theory/colorTheoryRegistry";
+import { ColorStrategyI } from "./theory/strategies";
 
 /**
  * Factory method. Creates a new ColorList based on the given
@@ -12,8 +12,7 @@ import TColor from "./TColor";
  * @param c a color to base the strategy off
  * @return new list
  */
-declare function createListUsingStrategy(strategy: any, c: TColor): ColorList;
-// TODO strategy names
-declare function createListUsingStrategy(strategy: any, c: TColor): ColorList;
+declare function createListUsingStrategy(strategy: keyof ColorStrategiesI, c: TColor): ColorList;
+declare function createListUsingStrategy(strategy: ColorStrategyI, c: TColor): ColorList;
 
 export = createListUsingStrategy;

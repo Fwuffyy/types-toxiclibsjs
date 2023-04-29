@@ -23,7 +23,7 @@ declare namespace color {
     export const RGBAccessor: typeof import("./color/RGBAccessor");
     export const RGBDistanceProxy: typeof import("./color/RGBDistanceProxy");
     export const TColor: typeof import("./color/TColor");
-    export const theory: any; // TODO
+    export const theory: typeof import("./color/theory");
     export const ToneMap: typeof import("./color/ToneMap");
 }
 

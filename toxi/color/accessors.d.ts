@@ -12,7 +12,7 @@ declare abstract class Accessor {
 	public static setComponentValueFor(col: TColor, val: number): void;
 }
 
-export type AccessorT = typeof Accessor;
+export type AccessorT = Accessor;
 
 declare function RGBAccessor(): void;
 declare function HSVAccessor(): void;

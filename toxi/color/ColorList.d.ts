@@ -17,6 +17,8 @@ import { AccessorT } from "./accessors";
 declare class ColorList {
 	public colors: TColor[];
 
+	constructor();
+
 	/** tcolor */
 	constructor(colors: TColor);
 
@@ -162,7 +164,7 @@ declare class ColorList {
 	 * @param isReversed true, if list is to be sorted in reverse.
 	 * @return itself
 	 */
-	public sortByDistance(proxy: any, isReversed: boolean): this;
+	public sortByDistance(proxy: any, isReversed?: boolean): this;
 
 	// TODO Proxy
 	/**

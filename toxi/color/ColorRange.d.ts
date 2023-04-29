@@ -109,6 +109,18 @@ declare class ColorRange {
         INTENSE: any;
     };
 
+    public static readonly LIGHT: any; // TODO float range
+    public static readonly DARK: any;
+    public static readonly BRIGHT: any;
+    public static readonly WEAK: any;
+    public static readonly NEUTRAL: any;
+    public static readonly FRESH: any;
+    public static readonly SOFT: any;
+    public static readonly HARD: any;
+    public static readonly WARM: any;
+    public static readonly COOL: any;
+    public static readonly INTENSE: any;
+
     // TODO float range
     public static getPresetForName(name: string): any;
 }

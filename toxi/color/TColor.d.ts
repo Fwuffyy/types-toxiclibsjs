@@ -114,7 +114,7 @@ declare class TColor {
 
 	public getBlended(c: TColor, t: number): TColor;
 
-	public getClosestHue(primaryOnly: boolean): Hue;
+	public getClosestHue(primaryOnly?: boolean): Hue;
 
 	public getComplement(): TColor;
 
@@ -232,9 +232,9 @@ declare class TColor {
      */
 	public toRGBADecimalArray(rgba?: RGBAArray, offset?: number): RGBAArray;
 
-	public toRGBCSS(asPercents: boolean): string;
+	public toRGBCSS(asPercents?: boolean): string;
 
-	public toRGBACSS(asPercents: boolean): string;
+	public toRGBACSS(asPercents?: boolean): string;
 
 	public toString(): string;
 
