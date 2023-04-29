@@ -418,15 +418,15 @@ declare class TColor {
 	public static readonly RED: TColor;
 
 	public static readonly RYB_WHEEL: [
-		Vec2D, // TODO type
-		Vec2D, Vec2D, Vec2D,
-		Vec2D, Vec2D, Vec2D,
-		Vec2D, Vec2D, Vec2D,
-		Vec2D, Vec2D, Vec2D,
-		Vec2D, Vec2D, Vec2D,
-		Vec2D, Vec2D, Vec2D,
-		Vec2D, Vec2D, Vec2D,
-		Vec2D, Vec2D, Vec2D
+		any, // TODO Vec2D type
+		any, any, any,
+		any, any, any,
+		any, any, any,
+		any, any, any,
+		any, any, any,
+		any, any, any,
+		any, any, any,
+		any, any, any
 	];
 
 	public static readonly GREEN: TColor;
