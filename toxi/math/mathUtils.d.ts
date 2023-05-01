@@ -115,7 +115,7 @@ declare namespace MathUtils {
 
     export function reduceAngle(theta: number): number;
 
-    export function sign(x: number): -1 | 1;
+    export function sign(x: number): -1 | 0 | 1;
 
     export function sin(theta: number): number;
 }
