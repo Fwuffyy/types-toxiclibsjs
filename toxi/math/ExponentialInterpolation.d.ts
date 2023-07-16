@@ -1,4 +1,4 @@
-import { MathInterpolatorT } from "../common";
+import Interpolation2D from "./Interpolation2D";
 
 /**
  * @class Exponential curve interpolation with adjustable exponent. Use exp in the
@@ -10,7 +10,7 @@ import { MathInterpolatorT } from "../common";
  * </ul>
  * @member toxi
  */
-declare class ExponentialInterpolation implements MathInterpolatorT {
+declare class ExponentialInterpolation implements Interpolation2D.InterpolatorT {
     public exponent: number;
 
     constructor(exp?: number);

@@ -1,4 +1,4 @@
-import { MathInterpolatorT } from "../common";
+import Interpolation2D from "./Interpolation2D";
 
 /**
  * @class Implementation of the circular interpolation function.
@@ -12,7 +12,7 @@ import { MathInterpolatorT } from "../common";
  * 
  * @param isFlipped true, if slope is inverted
  */
-declare class CircularInterpolation implements MathInterpolatorT {
+declare class CircularInterpolation implements Interpolation2D.InterpolatorT {
     public isFlipped: boolean;
 
     constructor(isFlipped?: boolean);

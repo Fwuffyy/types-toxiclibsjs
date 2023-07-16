@@ -1,4 +1,5 @@
-import { MathInterpolatorT, NumberComparatorResult } from "../common";
+import { NumberComparatorResult } from "../internals/numberComparator";
+import Interpolation2D from "../math/Interpolation2D";
 import LinearInterpolation from "../math/LinearInterpolation";
 import ColorList from "./ColorList";
 import TColor from "./TColor";
@@ -12,7 +13,7 @@ declare class _GradPoint {
 
     constructor(p: number, c: TColor);
 
-    public compareTo(p: _GradPoint): NumberComparatorResult
+    public compareTo(p: _GradPoint): NumberComparatorResult;
 
     public getColor(): TColor;
 
@@ -21,7 +22,7 @@ declare class _GradPoint {
 
 declare class ColorGradient {
     public gradient: _GradPoint[];
-    public interpolator: MathInterpolatorT;
+    public interpolator: Interpolation2D.InterpolatorT;
     public maxDither: number;
 
 	/**
@@ -59,7 +60,7 @@ declare class ColorGradient {
     /**
      * @param interpolator the interpolator to set
      */
-    public setInterpolator(interpolator: MathInterpolatorT): void;
+    public setInterpolator(interpolator: Interpolation2D.InterpolatorT): void;
 
 	/**
 	 * Sets the maximum dither amount. Setting this to values >0 will jitter the

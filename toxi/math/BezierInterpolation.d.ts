@@ -1,4 +1,4 @@
-import { MathInterpolatorT } from "../common";
+import Interpolation2D from "./Interpolation2D";
 
 /**
  * @class Bezier curve interpolation with configurable coefficients. The curve
@@ -16,7 +16,7 @@ import { MathInterpolatorT } from "../common";
  *
  * const b = new BezierInterpolation(1 / 3, -1 / 3);
  */
-declare class BezierInterpolation implements MathInterpolatorT {
+declare class BezierInterpolation implements Interpolation2D.InterpolatorT {
     public c1: number;
     public c2: number;
 

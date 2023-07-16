@@ -1,5 +1,4 @@
-import { ArrayIterator } from "../internals/Iterator";
-import { CallbackIterator } from "../common";
+import { ArrayIterator, CallbackIterator } from "../internals/Iterator";
 import TColor from "./TColor";
 import { AccessorT } from "./accessors";
 import { DistanceProxyT } from "./distanceProxies";

@@ -1,5 +1,5 @@
-import { MathInterpolatorT } from "../common";
 import CircularInterpolation from "./CircularInterpolation";
+import Interpolation2D from "./Interpolation2D";
 
 /**
  * @class This class provides an adjustable zoom lens to either bundle or dilate values
@@ -7,7 +7,7 @@ import CircularInterpolation from "./CircularInterpolation";
  * have a look at the provided ScaleMapDataViz and ZoomLens examples.
  * @member toxi
  */
-declare class ZoomLensInterpolation implements MathInterpolatorT {
+declare class ZoomLensInterpolation implements Interpolation2D.InterpolatorT {
     public leftImpl: CircularInterpolation;
     public rightImpl: CircularInterpolation;
     public lensPos: number;

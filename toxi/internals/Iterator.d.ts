@@ -28,10 +28,13 @@ declare class ObjectIterator<T> {
 
 declare function Iterator<T>(collection: T[] | Record<string, T>): ArrayIterator<T> | ObjectIterator<T>;
 
+declare type CallbackIterator<T> = (item: T, index: number, array: T[]) => void;
+
 // declare function Iterator<T>(collection: T[]): ArrayIterator<T>;
 // declare function Iterator<T>(collection: T): ObjectIterator<T>;
 
 export {
+    CallbackIterator,
     ArrayIterator,
     ObjectIterator,
     Iterator

@@ -1,3 +1,4 @@
+import Vec2D from "../geom/Vec2D";
 import Hue from "./Hue";
 import { AccessorT } from "./accessors";
 
@@ -418,15 +419,15 @@ declare class TColor {
 	public static readonly RED: TColor;
 
 	public static readonly RYB_WHEEL: [
-		any, // TODO Vec2D type
-		any, any, any,
-		any, any, any,
-		any, any, any,
-		any, any, any,
-		any, any, any,
-		any, any, any,
-		any, any, any,
-		any, any, any
+		Vec2D,
+		Vec2D, Vec2D, Vec2D,
+		Vec2D, Vec2D, Vec2D,
+		Vec2D, Vec2D, Vec2D,
+		Vec2D, Vec2D, Vec2D,
+		Vec2D, Vec2D, Vec2D,
+		Vec2D, Vec2D, Vec2D,
+		Vec2D, Vec2D, Vec2D,
+		Vec2D, Vec2D, Vec2D
 	];
 
 	public static readonly GREEN: TColor;

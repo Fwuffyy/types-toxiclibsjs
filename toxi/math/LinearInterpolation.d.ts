@@ -1,4 +1,4 @@
-import { MathInterpolatorT } from "../common";
+import Interpolation2D from "./Interpolation2D";
 
 /**
  * @class Implementation of the linear interpolation function
@@ -7,7 +7,7 @@ import { MathInterpolatorT } from "../common";
  * 
  * @member toxi
  */
-declare class LinearInterpolation implements MathInterpolatorT {
+declare class LinearInterpolation implements Interpolation2D.InterpolatorT {
     public interpolate(a: number, b: number, f: number): number;
 
     public static interpolate(a: number, b: number, f: number): number;

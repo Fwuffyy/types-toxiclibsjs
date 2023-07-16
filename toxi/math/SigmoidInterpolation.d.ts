@@ -1,10 +1,10 @@
-import { MathInterpolatorT } from "../common";
+import Interpolation2D from "./Interpolation2D";
 
 /**
  * @class Initializes the s-curve with the default sharpness = 2
  * @member toxi
  */
-declare class SigmoidInterpolation implements MathInterpolatorT {
+declare class SigmoidInterpolation implements Interpolation2D.InterpolatorT {
     public sharpness: number;
     public sharpPremult: number;
 

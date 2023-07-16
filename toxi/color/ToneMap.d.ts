@@ -1,4 +1,4 @@
-import { MathInterpolatorT } from "../common";
+import Interpolation2D from "../math/Interpolation2D";
 import ScaleMap from "../math/ScaleMap";
 import ColorGradient from "./ColorGradient";
 import ColorList from "./ColorList";
@@ -83,7 +83,7 @@ declare class ToneMap {
     /**
      * @param {InterpolateStrategy} func
      */
-    public setMapFunction(func: MathInterpolatorT): void;
+    public setMapFunction(func: Interpolation2D.InterpolatorT): void;
 }
 
 export = ToneMap;

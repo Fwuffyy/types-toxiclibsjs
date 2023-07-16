@@ -3,7 +3,6 @@
  * @member toxi
  */
 declare namespace Interpolation2D {
-    // TODO Vec2D
     /**
      * @param {Vec2D} p coord of point to filter
      * @param {Vec2D} p1 coord of top-left corner
@@ -30,6 +29,12 @@ declare namespace Interpolation2D {
      * @return {Number} interpolated value
      */
     export function bilinear(x: number, y: number, x1: number, y1: number, x2: number, y2: number, tl: number, tr: number, bl: number, br: number): number;
+
+    declare interface InterpolatorT {
+        public interpolate(a: number, b: number, ...args: any): number;
+    
+        public static interpolate(a: number, b: number, ...args: any): number;
+    }
 }
 
 export = Interpolation2D;

@@ -1,4 +1,4 @@
-import { MathInterpolatorT } from "../common";
+import Interpolation2D from "./Interpolation2D";
 
 /**
  * @class Delivers a number of decimated/stepped values for a given interval. E.g. by
@@ -7,7 +7,7 @@ import { MathInterpolatorT } from "../common";
  * {@link InterpolateStrategy} can be specified via the constructor.
  * @member toxi
  */
-declare class DecimatedInterpolation<T extends MathInterpolatorT> implements MathInterpolatorT {
+declare class DecimatedInterpolation<T extends Interpolation2D.InterpolatorT> implements Interpolation2D.InterpolatorT {
     public numSteps: number;
     public strategy: T;
 

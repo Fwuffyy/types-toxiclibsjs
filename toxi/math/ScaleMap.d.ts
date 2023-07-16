@@ -1,4 +1,4 @@
-import { MathInterpolatorT } from "../common";
+import Interpolation2D from "./Interpolation2D";
 
 interface ScaleMapOptions {
     input: _RangeOptions;
@@ -31,7 +31,7 @@ declare class _Range {
  * specified. By default linear projection is used.
  */ 
 declare class ScaleMap {
-    public mapFunction: MathInterpolatorT;
+    public mapFunction: Interpolation2D.InterpolatorT;
     public _interval: number;
     public _in: _Range;
     public _out: _Range;
@@ -109,7 +109,7 @@ declare class ScaleMap {
      * @param func
      *            interpolate strategy implementation
      */
-    public setMapFunction(func: MathInterpolatorT): void;
+    public setMapFunction(func: Interpolation2D.InterpolatorT): void;
 
     /**
      * Sets new minimum & maximum values for the output/target range

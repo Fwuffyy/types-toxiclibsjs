@@ -1,4 +1,4 @@
-import { NumberComparatorResult } from "../common";
+import { NumberComparatorResult } from "../internals/numberComparator";
 import TColor from "./TColor";
 
 declare class HistEntry {
@@ -7,7 +7,7 @@ declare class HistEntry {
 
 	constructor(c: TColor);
 
-	public compareTo(entry: HistEntry): NumberComparatorResult;
+	public compareTo(entry: HistEntry): NumberComparatorResult
 
 	public getColor(): TColor;
 
