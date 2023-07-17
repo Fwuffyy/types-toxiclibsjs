@@ -1,3 +1,4 @@
+import FloatRange from "../util/datatypes/FloatRange";
 import ColorList from "./ColorList";
 import Hue from "./Hue";
 import TColor from "./TColor";
@@ -13,7 +14,6 @@ declare class ColorRange {
      */
     constructor(list: ColorList);
 
-    // TODO FloatRange class
     /**
      * Hue, saturation, brightness, alpha, black, white, name
      * @param hue
@@ -24,7 +24,7 @@ declare class ColorRange {
      * @param white
      * @param name
      */
-    constructor(hue: any, sat: any, bri: any, alpha: any, black: any, white: any, name: string);
+    constructor(hue: FloatRange, sat: FloatRange, bri: FloatRange, alpha: FloatRange, black: FloatRange, white: FloatRange, name: string);
     
     /**
      * Hue, saturation, brightness, alpha, name
@@ -34,7 +34,7 @@ declare class ColorRange {
      * @param [alpha]
      * @param [name]
      */
-    constructor(hue: any, sat: any, bri: any, alpha: any, name: string);
+    constructor(hue?: FloatRange, sat?: FloatRange, bri?: FloatRange, alpha?: FloatRange, name?: string);
 
     /**
      * Hue, saturation, brightness, name
@@ -43,7 +43,7 @@ declare class ColorRange {
      * @param [bri]
      * @param [name]
      */
-    constructor(hue: any, sat: any, bri: any, name: string);
+    constructor(hue?: FloatRange, sat?: FloatRange, bri?: FloatRange, name?: string);
 
     /**
      * Hue
@@ -60,18 +60,18 @@ declare class ColorRange {
     public add(rc: TColor): this;
     public add(rc: ColorRange): this;
 
-    public addAlphaRange(range: any): this; // TODO float range
+    public addAlphaRange(range: FloatRange): this;
     public addAlphaRange(min: number, max: number): this;
     
-    public addBrightnessRange(range: any): this; // TODO float range
+    public addBrightnessRange(range: FloatRange): this;
     public addBrightnessRange(min: number, max: number): this;
     
     public addHue(hue: Hue): this;
     
-    public addHueRange(range: any): this; // TODO float range
+    public addHueRange(range: FloatRange): this;
     public addHueRange(min: number, max: number): this;
     
-    public addSaturationRange(range: any): this; // TODO float range
+    public addSaturationRange(range: FloatRange): this;
     public addSaturationRange(min: number, max: number): this;
 
     public contains(c: TColor): boolean;
@@ -90,39 +90,37 @@ declare class ColorRange {
 
     public getSum(range: ColorRange): ColorRange;
 
-    // TODO Range set?
-    public isValueInConstraint(val: number, rangeSet: any[]): boolean;
+    public isValueInConstraint(val: number, rangeSet: FloatRange[]): boolean;
 
     public static readonly DEFAULT_VARIANCE: 0.035;
 
     public static readonly PRESETS: {
-        LIGHT: any; // TODO float range
-        DARK: any;
-        BRIGHT: any;
-        WEAK: any;
-        NEUTRAL: any;
-        FRESH: any;
-        SOFT: any;
-        HARD: any;
-        WARM: any;
-        COOL: any;
-        INTENSE: any;
+        LIGHT: FloatRange;
+        DARK: FloatRange;
+        BRIGHT: FloatRange;
+        WEAK: FloatRange;
+        NEUTRAL: FloatRange;
+        FRESH: FloatRange;
+        SOFT: FloatRange;
+        HARD: FloatRange;
+        WARM: FloatRange;
+        COOL: FloatRange;
+        INTENSE: FloatRange;
     };
 
-    public static readonly LIGHT: any; // TODO float range
-    public static readonly DARK: any;
-    public static readonly BRIGHT: any;
-    public static readonly WEAK: any;
-    public static readonly NEUTRAL: any;
-    public static readonly FRESH: any;
-    public static readonly SOFT: any;
-    public static readonly HARD: any;
-    public static readonly WARM: any;
-    public static readonly COOL: any;
-    public static readonly INTENSE: any;
+    public static readonly LIGHT: FloatRange;
+    public static readonly DARK: FloatRange;
+    public static readonly BRIGHT: FloatRange;
+    public static readonly WEAK: FloatRange;
+    public static readonly NEUTRAL: FloatRange;
+    public static readonly FRESH: FloatRange;
+    public static readonly SOFT: FloatRange;
+    public static readonly HARD: FloatRange;
+    public static readonly WARM: FloatRange;
+    public static readonly COOL: FloatRange;
+    public static readonly INTENSE: FloatRange;
 
-    // TODO float range
-    public static getPresetForName(name: string): any;
+    public static getPresetForName(name: string): FloatRange;
 }
 
 export = ColorRange;
